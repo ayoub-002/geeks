@@ -34,7 +34,7 @@ print(our_fav_numbers)
 
 #Exercise 6: Tuple
 
-NO
+# NO we cant add in tuple
 
 #Exercise 7: List
 
