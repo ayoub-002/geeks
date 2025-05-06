@@ -8,10 +8,10 @@ print("hello world\n"*4)
 
 #Exercise 3 : What’s your name ?
 
-if ("ayoub" == input("entre your name : ")) :
+if ("mouhcine" == input("entre your name : ")) :
     print("wow we have the same name")
 else :
-    print("oh no not the same name ")
+    print("not the same name noob")
 
 #Exercise 4 : Tall enough to ride a roller coaster
 
@@ -23,20 +23,20 @@ else :
 
 #Exercise 5 : Favorite Numbers
 
-my_fav_numbers = {7,10,13,6}
+my_fav_numbers = {2,7,16,4}
 
 my_fav_numbers.add(3)
 my_fav_numbers.add(50)
 my_fav_numbers.remove(list(my_fav_numbers)[-1])
-friend_fav_numbers = {15,9,1,0}
+friend_fav_numbers = {1,2,3,8,15}
 our_fav_numbers = my_fav_numbers.union(friend_fav_numbers)
 print(our_fav_numbers)
 
 #Exercise 6: Tuple
 
-#NO it's not pusibl in tuple
+NO
 
-#Exercise 6: Tuple
+#Exercise 7: List
 
 basket = ["Banana", "Apples", "Oranges", "Blueberries"]
 basket.remove("Banana")
@@ -60,6 +60,5 @@ while sandwich_orders:
     sandwich = sandwich_orders.pop(0)
     print(f"I made your {sandwich.lower()}")
     finished_sandwiches.append(sandwich)
-
 
 
