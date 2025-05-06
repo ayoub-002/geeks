@@ -8,10 +8,10 @@ print("hello world\n"*4)
 
 #Exercise 3 : What’s your name ?
 
-if ("mouhcine" == input("entre your name : ")) :
+if ("ayoub" == input("entre your name : ")) :
     print("wow we have the same name")
 else :
-    print("not the same name noob")
+    print("not the same name duuude")
 
 #Exercise 4 : Tall enough to ride a roller coaster
 
