@@ -16,5 +16,4 @@ INSERT INTO actors (first_name, last_name, birth_date) VALUES
 SELECT COUNT(*) AS total_actors FROM actors;
 
 -- 4. Try to insert a new actor with a missing last name
-INSERT INTO actors (first_name) VALUES ('');  -- Expected to fail
-
+INSERT INTO actors (first_name) VALUES ('');
