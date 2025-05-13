@@ -95,3 +95,9 @@ SELECT city.city, country.country
 FROM city
 JOIN country ON city.country_id = country.country_id;
 
+-- 15. Get all customers with their payment details
+SELECT customer.customer_id, customer.first_name, customer.last_name, payment.amount, payment.payment_date, payment.staff_id
+FROM customer
+INNER JOIN payment
+ON customer.customer_id = payment.customer_id
+ORDER BY payment.staff_id asc
