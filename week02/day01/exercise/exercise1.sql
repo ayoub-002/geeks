@@ -1,11 +1,11 @@
 --------> Create a database called public.
 --------> Add two tables: items | customers.
 
--- CREATE TABLE items(
---  item_id SERIAL PRIMARY KEY,
---  item_name VARCHAR (50) NOT NULL,
---  price INT NOT NULL
--- );
+CREATE TABLE items(
+ item_id SERIAL PRIMARY KEY,
+ item_name VARCHAR (50) NOT NULL,
+ price INT NOT NULL
+);
 
 -- CREATE TABLE customers(
 --  customer_id SERIAL PRIMARY KEY,
