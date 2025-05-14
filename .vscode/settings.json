@@ -9,6 +9,16 @@
             "database": "rental",
             "username": "postgres",
             "password": "ayoub123"
+        },
+        {
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 5432,
+            "askForPassword": true,
+            "driver": "PostgreSQL",
+            "name": "ayoub",
+            "database": "postgres",
+            "username": "postgres"
         }
     ]
 }

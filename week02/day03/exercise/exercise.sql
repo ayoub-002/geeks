@@ -50,8 +50,8 @@ DELETE FROM new_film WHERE id = 1;
 UPDATE film SET language_id = 2 WHERE film_id IN (1, 2, 3);
 
 -- 2. Foreign keys for customer table:
--- store_id → store(store_id)
--- address_id → address(address_id)
+-- store_id -> store(store_id)
+-- address_id -> address(address_id)
 
 -- 3. Drop customer_review table
 DROP TABLE customer_review;
