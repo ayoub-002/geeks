@@ -19,6 +19,24 @@
             "name": "ayoub",
             "database": "postgres",
             "username": "postgres"
+        },
+        {
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 5432,
+            "driver": "PostgreSQL",
+            "name": "Restaurant",
+            "database": "Restaurant",
+            "username": "postgres"
+        },
+        {
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 5432,
+            "driver": "PostgreSQL",
+            "name": "countries",
+            "database": "countries",
+            "username": "postgres"
         }
     ]
 }
