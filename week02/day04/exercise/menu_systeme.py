@@ -1,6 +1,6 @@
 import psycopg2
 
-# --- Database connection class ---
+# Database connection class
 class DbConnection:
     def __init__(self, dbname="Restaurant", user="postgres", password="ayoub123", host="localhost"):
         self.dbname = dbname
@@ -21,7 +21,7 @@ class DbConnection:
             print("Database connection failed:", e)
             exit()
 
-# --- MenuItem class ---
+# MenuItem class
 class MenuItem:
     def __init__(self, item_name, item_price):
         self.item_name = item_name
@@ -58,7 +58,7 @@ class MenuItem:
         cursor.close()
         conn.close()
 
-# --- MenuManager class ---
+# MenuManager class
 class MenuManager:
     @classmethod
     def get_by_name(cls, item_name):
@@ -82,7 +82,7 @@ class MenuManager:
         conn.close()
         return items
 
-# --- CLI Functions ---
+# Functions to manage menu items
 def add_item_to_menu():
     name = input("Enter new item name: ")
     price = int(input("Enter item price: "))
@@ -146,6 +146,6 @@ def show_user_menu():
         else:
             print("Invalid option. Try again.")
 
-# --- Run the CLI ---
+#Run the program
 if __name__ == "__main__":
     show_user_menu()
