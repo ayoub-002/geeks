@@ -1,6 +1,10 @@
 import requests
+# library to make HTTP requests
 import psycopg2
+# library to work with PostgreSQL
 import random
+# library to generate random numbers
+
 
 connection = psycopg2.connect(dbname="countries", user="postgres", password="ayoub123", host="localhost")
 
