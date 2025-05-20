@@ -1,19 +1,16 @@
-// Step 1: Create a sentence containing "not" and "bad"
+//step 1
 let sentence = "The movie is not that bad, I like it";
-
-// Step 2: Find the position of the first appearance of "not"
+//step 2
 let wordNot = sentence.indexOf("not");
-
-// Step 3: Find the position of the first appearance of "bad"
+//step 3
 let wordBad = sentence.indexOf("bad");
-
-// Step 4: Check if "bad" comes after "not"
+//step 4
 if (wordNot !== -1 && wordBad !== -1 && wordBad > wordNot) {
-  // Replace the "not...bad" part with "good"
+  //replace the word "not" and "bad" with "good"
   let result = sentence.slice(0, wordNot) + "good" + sentence.slice(wordBad + 3);
   console.log(result);
 } else {
-  // If "bad" doesn't come after "not", log the original sentence
+  //print the original sentence or if the word "not" is after the word "bad"
   console.log(sentence);
 }
 
