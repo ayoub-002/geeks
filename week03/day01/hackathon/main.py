@@ -1,90 +1,48 @@
-from fastapi import FastAPI, Depends, HTTPException, Request
-import models, schemas, auth, crud
-from database import engine, SessionLocal
+from fastapi import FastAPI, Depends, HTTPException, status, Request
 from sqlalchemy.orm import Session
-from auth import authenticate_user, create_access_token, get_current_user
+from fastapi.security import OAuth2PasswordRequestForm
+from fastapi.middleware.cors import CORSMiddleware
+import crud, models, schemas, auth
+from database import engine
+from dependencies import get_db
 from middleware import admin_required
 
 models.Base.metadata.create_all(bind=engine)
 
 app = FastAPI()
 
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
 @app.post("/register", response_model=schemas.UserOut)
-def register(user: schemas.UserCreate, db: Session = Depends(SessionLocal)):
+def register(user: schemas.UserCreate, db: Session = Depends(get_db)):
+    db_user = auth.get_user(db, user.username)
+    if db_user:
+        raise HTTPException(status_code=400, detail="Username already registered")
     return crud.create_user(db, user)
 
 @app.post("/login")
-def login(user: schemas.UserCreate, db: Session = Depends(SessionLocal)):
-    db_user = authenticate_user(db, user.username, user.password)
-    if not db_user:
-        raise HTTPException(status_code=400, detail="Invalid credentials")
-    access_token = create_access_token(
-        data={"sub": db_user.username, "is_admin": db_user.is_admin}
-    )
+def login(form_data: OAuth2PasswordRequestForm = Depends(), db: Session = Depends(get_db)):
+    user = auth.authenticate_user(db, form_data.username, form_data.password)
+    if not user:
+        raise HTTPException(status_code=401, detail="Incorrect username or password")
+    access_token = auth.create_access_token(data={"sub": user.username, "is_admin": user.is_admin})
     return {"access_token": access_token, "token_type": "bearer"}
 
 @app.post("/books", response_model=schemas.BookOut)
-def create_book(book: schemas.BookCreate, db: Session = Depends(SessionLocal), current_user: models.User = Depends(get_current_user)):
-    return crud.create_book(db, book.title, current_user.id, book.category_id)
-
-@app.get("/books", response_model=list[schemas.BookOut])
-def read_books(db: Session = Depends(SessionLocal)):
-    return crud.get_books(db)
-
-@app.put("/books/{book_id}", response_model=schemas.BookOut)
-def update_book(book_id: int, book: schemas.BookCreate, db: Session = Depends(SessionLocal), current_user: models.User = Depends(get_current_user)):
-    existing_book = db.query(models.Book).filter(models.Book.id == book_id).first()
-    if existing_book.author_id != current_user.id:
-        raise HTTPException(status_code=403, detail="You can only update your own books")
-    return crud.update_book(db, book_id, book.title)
-
-@app.delete("/books/{book_id}")
-def delete_book(book_id: int, db: Session = Depends(SessionLocal), current_user: models.User = Depends(get_current_user)):
-    book = db.query(models.Book).filter(models.Book.id == book_id).first()
-    if book.author_id != current_user.id and not current_user.is_admin:
-        raise HTTPException(status_code=403, detail="Not authorized")
-    crud.delete_book(db, book_id)
-    return {"message": "Book deleted"}
+def create_book(book: schemas.BookCreate, db: Session = Depends(get_db), current_user: models.User = Depends(auth.get_current_user)):
+    return crud.create_book(db, book, current_user.id)
 
 @app.post("/reviews", response_model=schemas.ReviewOut)
-def create_review(review: schemas.ReviewCreate, db: Session = Depends(SessionLocal), current_user: models.User = Depends(get_current_user)):
-    return crud.create_review(db, review.content, current_user.id, review.book_id)
-
-@app.get("/reviews", response_model=list[schemas.ReviewOut])
-def read_reviews(db: Session = Depends(SessionLocal)):
-    return crud.get_reviews(db)
-
-@app.get("/admin/users", response_model=list[schemas.UserOut])
-def get_all_users(request: Request, db: Session = Depends(SessionLocal)):
-    admin_required(request)
-    return crud.get_users(db)
-
-@app.delete("/admin/users/{user_id}")
-def delete_user(user_id: int, request: Request, db: Session = Depends(SessionLocal)):
-    admin_required(request)
-    crud.delete_user(db, user_id)
-    return {"message": "User deleted"}
+def create_review(review: schemas.ReviewCreate, db: Session = Depends(get_db), current_user: models.User = Depends(auth.get_current_user)):
+    return crud.create_review(db, review, current_user.id)
 
 @app.post("/categories", response_model=schemas.CategoryOut)
-def create_category(category: schemas.CategoryCreate, db: Session = Depends(SessionLocal), current_user: models.User = Depends(get_current_user)):
-    if not current_user.is_admin:
-        raise HTTPException(status_code=403, detail="Only admins can create categories")
+def create_category(category: schemas.CategoryCreate, request: Request, db: Session = Depends(get_db)):
+    admin_required(request)
     return crud.create_category(db, category)
-
-@app.get("/categories", response_model=list[schemas.CategoryOut])
-def read_categories(db: Session = Depends(SessionLocal)):
-    return crud.get_categories(db)
-
-@app.put("/categories/{category_id}", response_model=schemas.CategoryOut)
-def update_category(category_id: int, category: schemas.CategoryCreate, db: Session = Depends(SessionLocal), current_user: models.User = Depends(get_current_user)):
-    if not current_user.is_admin:
-        raise HTTPException(status_code=403, detail="Only admins can update categories")
-    return crud.update_category(db, category_id, category.name)
-
-@app.delete("/categories/{category_id}")
-def delete_category(category_id: int, db: Session = Depends(SessionLocal), current_user: models.User = Depends(get_current_user)):
-    if not current_user.is_admin:
-        raise HTTPException(status_code=403, detail="Only admins can delete categories")
-    crud.delete_category(db, category_id)
-    return {"message": "Category deleted"}
-
