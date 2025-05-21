@@ -72,7 +72,7 @@ function totalVacationCost() {
   console.log(`Hotel: $${hotel}, Plane: $${plane}, Car: $${car}`);
   console.log(`Total vacation cost: $${hotel + plane + car}`);
 }
-// totalVacationCost(); // Uncomment to run
+totalVacationCost();
 
 // Exercise 5
 const div = document.getElementById("container");
