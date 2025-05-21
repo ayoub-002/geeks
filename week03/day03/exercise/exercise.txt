@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>JavaScript Exercises</title>
+  <style>
+    body {
+      font-size: 18px;
+    }
+    #container {
+      background-color: lightblue;
+      padding: 10px;
+    }
+    img {
+      width: 100px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>JavaScript Exercises</h1>
+
+  <!-- Exercise 5 -->
+  <div id="container">Users:</div>
+  <ul class="list">
+    <li>John</li>
+    <li>Pete</li>
+  </ul>
+  <ul class="list">
+    <li>David</li>
+    <li>Sarah</li>
+    <li>Dan</li>
+  </ul>
+
+  <!-- Exercise 6 -->
+  <div id="navBar">
+    <ul>
+      <li><a href="#">Profile</a></li>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">My Friends</a></li>
+      <li><a href="#">Messenger</a></li>
+      <li><a href="#">My Pics</a></li>
+    </ul>
+  </div>
+
+  <!-- Exercise 7 -->
+  <section class="listBooks"></section>
+
+  <script>
+    // Exercise 1
+    function displayNumbersDivisible(divisor = 23) {
+      let sum = 0;
+      for (let i = 0; i <= 500; i++) {
+        if (i % divisor === 0) {
+          console.log(i);
+          sum += i;
+        }
+      }
+      console.log("Sum:", sum);
+    }
+    displayNumbersDivisible();
+    displayNumbersDivisible(3);
+
+    // Exercise 2
+    const stock = { 
+      banana: 6, apple: 0, pear: 12, orange: 32, blueberry: 1 
+    };
+    const prices = {    
+      banana: 4, apple: 2, pear: 1, orange: 1.5, blueberry: 10 
+    };
+    const shoppingList = ["banana", "orange", "apple"];
+    function myBill() {
+      let total = 0;
+      for (let item of shoppingList) {
+        if (item in stock && stock[item] > 0) {
+          total += prices[item];
+          stock[item]--;
+        }
+      }
+      console.log("Total bill:", total);
+    }
+    myBill();
+
+    // Exercise 3
+    function changeEnough(itemPrice, amountOfChange) {
+      const [q, d, n, p] = amountOfChange;
+      const total = q * 0.25 + d * 0.10 + n * 0.05 + p * 0.01;
+      return total >= itemPrice;
+    }
+    console.log(changeEnough(4.25, [25, 20, 5, 0]));
+    console.log(changeEnough(14.11, [2, 100, 0, 0]));
+    console.log(changeEnough(0.75, [0, 0, 20, 5]));
+
+    // Exercise 4
+    function hotelCost(nights) {
+      if (isNaN(nights) || nights <= 0) return 0;
+      return nights * 140;
+    }
+    function planeRideCost(destination) {
+      switch (destination.toLowerCase()) {
+        case "london": return 183;
+        case "paris": return 220;
+        default: return 300;
+      }
+    }
+    function rentalCarCost(days) {
+      if (isNaN(days) || days <= 0) return 0;
+      let cost = days * 40;
+      if (days > 10) cost *= 0.95;
+      return cost;
+    }
+    function totalVacationCost() {
+      const nights = Number(prompt("How many nights at the hotel?"));
+      const destination = prompt("Where are you flying to?");
+      const carDays = Number(prompt("How many days for car rental?"));
+      const hotel = hotelCost(nights);
+      const plane = planeRideCost(destination);
+      const car = rentalCarCost(carDays);
+      const total = hotel + plane + car;
+      console.log(`The car cost: $${car}, the hotel cost: $${hotel}, the plane tickets cost: $${plane}`);
+      console.log(`Total Vacation Cost: $${total}`);
+    }
+    totalVacationCost();
+
+    // Exercise 5
+    const div = document.getElementById("container");
+    console.log(div);
+    const lists = document.querySelectorAll("ul.list");
+    lists[0].children[1].textContent = "Richard";
+    lists[1].removeChild(lists[1].children[1]);
+    lists.forEach(ul => {
+      ul.children[0].textContent = "YourName";
+      ul.classList.add("student_list");
+    });
+    lists[0].classList.add("university", "attendance");
+    lists[1].lastElementChild.style.display = "none";
+    lists[0].children[1].style.border = "2px solid black";
+    if (div.style.backgroundColor === "lightblue") {
+      const users = lists[0].children;
+      alert(`Hello ${users[0].textContent} and ${users[1].textContent}`);
+    }
+
+    // Exercise 6
+    const navDiv = document.getElementById("navBar");
+    navDiv.setAttribute("id", "socialNetworkNavigation");
+    const ul = navDiv.querySelector("ul");
+    const newLi = document.createElement("li");
+    newLi.textContent = "Logout";
+    ul.appendChild(newLi);
+    console.log("First link:", ul.firstElementChild.textContent);
+    console.log("Last link:", ul.lastElementChild.textContent);
+
+    // Exercise 7
+    const allBooks = [
+      {
+        title: "Atomic Habits",
+        author: "James Clear",
+        image: "https://covers.openlibrary.org/b/id/7984916-L.jpg",
+        alreadyRead: true
+      },
+      {
+        title: "Deep Work",
+        author: "Cal Newport",
+        image: "https://covers.openlibrary.org/b/id/8104449-L.jpg",
+        alreadyRead: false
+      }
+    ];
+    const section = document.querySelector(".listBooks");
+    allBooks.forEach(book => {
+      const div = document.createElement("div");
+      const text = document.createElement("p");
+      text.textContent = `${book.title} written by ${book.author}`;
+      if (book.alreadyRead) text.style.color = "red";
+      const img = document.createElement("img");
+      img.src = book.image;
+      div.appendChild(text);
+      div.appendChild(img);
+      section.appendChild(div);
+    });
+  </script>
+</body>
+</html>
