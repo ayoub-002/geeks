@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Animations Exercises</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    p {
+      color: red;
+      padding: 5px;
+      margin: 5px 0;
+    }
+
+    #container {
+      width: 400px;
+      height: 400px;
+      position: relative;
+      background: yellow;
+      margin-top: 20px;
+      padding: 10px;
+      overflow: auto;
+      border: 1px solid black;
+    }
+
+    #box-container {
+      width: 400px;
+      height: 400px;
+      position: relative;
+      background: yellow;
+      border: 1px solid black;
+      margin-top: 20px;
+    }
+
+    #animate {
+      width: 50px;
+      height: 50px;
+      position: absolute;
+      background-color: red;
+      left: 0;
+      top: 0;
+    }
+
+    .section {
+      margin-bottom: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Exercise 1: Timer -->
+  <div class="section">
+    <h2>Exercise 1: Timer</h2>
+    <div id="timer-container">
+      <div id="container"></div>
+      <button id="clear">Clear Interval</button>
+    </div>
+  </div>
+
+  <!-- Exercise 2: Move the box -->
+  <div class="section">
+    <h2>Exercise 2: Move the Box</h2>
+    <p><button onclick="myMove()">Click Me</button></p>
+    <div id="box-container">
+      <div id="animate"></div>
+    </div>
+  </div>
+
+  <script>
+    // -------- Exercise 1 --------
+
+    // Part I: Alert after 2 seconds
+    setTimeout(() => {
+      alert("Hello World");
+    }, 2000);
+
+    // Part II: Add a paragraph after 2 seconds
+    setTimeout(() => {
+      const container = document.getElementById("container");
+      const p = document.createElement("p");
+      p.textContent = "Hello World";
+      container.appendChild(p);
+    }, 2000);
+
+    // Part III: Add paragraph every 2 seconds, stop after 5
+    let count = 0;
+    const intervalId = setInterval(() => {
+      const container = document.getElementById("container");
+      const p = document.createElement("p");
+      p.textContent = "Hello World";
+      container.appendChild(p);
+      count++;
+      if (count >= 5) {
+        clearInterval(intervalId);
+      }
+    }, 2000);
+
+    // Clear interval on button click
+    document.getElementById("clear").addEventListener("click", () => {
+      clearInterval(intervalId);
+    });
+
+    // -------- Exercise 2 --------
+    function myMove() {
+      const box = document.getElementById("animate");
+      let pos = 0;
+      const containerWidth = document.getElementById("box-container").offsetWidth;
+      const boxWidth = box.offsetWidth;
+
+      const interval = setInterval(() => {
+        if (pos >= containerWidth - boxWidth) {
+          clearInterval(interval);
+        } else {
+          pos++;
+          box.style.left = pos + "px";
+        }
+      }, 1);
+    }
+  </script>
+</body>
+</html>
