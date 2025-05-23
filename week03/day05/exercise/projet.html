@@ -1,0 +1,1711 @@
+<html><head>
+	<title></title>
+	<style>
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+	background-color: darkgrey;
+}
+
+#sidebar {
+	display: grid;
+	grid-gap: 5px;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(8, 1fr);
+
+	height: 100vh;
+	width: 20%;
+	float: left;
+
+	background-color: darkgrey;
+	padding: 5px;
+}
+
+#main {
+	display: grid;
+	grid-template-columns: repeat(60, 1fr);
+
+	height: 100vh;
+
+	padding: 5px 5px 5px 0;
+}
+
+#sidebar > * {
+	border: 1px black solid;
+}
+
+#main > * {
+	border: 1px lightgray solid;
+	background-color: white;
+}
+
+button {
+	grid-column: 1/4; 
+
+	background-color: whitesmoke;
+	border: none;
+	border-radius: 8px;
+	color:black;
+	padding: 5px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 22px;
+	margin: 4px 2px;
+	cursor: pointer;
+  }
+  </style>
+</head>
+<body>
+	<div id="sidebar">
+		<button>Clear</button>
+		<div style="background-color: red;"></div>
+		<div style="background-color: orangered;"></div>
+		<div style="background-color: orange;"></div>
+		<div style="background-color: yellow;"></div>
+		<div style="background-color: yellowgreen;"></div>
+		<div style="background-color: lightgreen;"></div>
+		<div style="background-color: green;"></div>
+		<div style="background-color: turquoise;"></div>
+		<div style="background-color: cyan;"></div>
+		<div style="background-color: lightskyblue;"></div>
+		<div style="background-color: dodgerblue;"></div>
+		<div style="background-color: blue;"></div>
+		<div style="background-color: darkblue;"></div>
+		<div style="background-color: indigo;"></div>
+		<div style="background-color: darkmagenta;"></div>
+		<div style="background-color: violet;"></div>
+		<div style="background-color: lightpink;"></div>
+		<div style="background-color: lightgray;"></div>
+		<div style="background-color: gray;"></div>
+		<div style="background-color: black; border: 1px solid white"></div>
+		<div style="background-color: white;"></div>
+	</div>
+	<div id="main">
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+		<div style="background-color: white;"></div>
+	</div>
+  <script>
+    const sidebar = document.getElementById('sidebar');
+	const colorButtons = sidebar.querySelectorAll('div');
+	const clearButton = sidebar.querySelector('button');
+	const gridCells = document.querySelectorAll('#main div');
+
+	let currentColor = 'black';
+	let mouseDown = false;
+
+	colorButtons.forEach(div => {
+	  div.addEventListener('click', () => {
+	    colorButtons.forEach(d => d.classList.remove('selected'));
+	    div.classList.add('selected');
+	    currentColor = div.style.backgroundColor;
+	  });
+	});
+
+	gridCells.forEach(cell => {
+	  cell.addEventListener('mousedown', () => {
+	    cell.style.backgroundColor = currentColor;
+	  });
+	  cell.addEventListener('mouseover', () => {
+	    if (mouseDown) {
+	      cell.style.backgroundColor = currentColor;
+	    }
+	  });
+	});
+
+	document.body.addEventListener('mousedown', () => mouseDown = true);
+	document.body.addEventListener('mouseup', () => mouseDown = false);
+
+	clearButton.addEventListener('click', () => {
+	  gridCells.forEach(cell => {
+	    cell.style.backgroundColor = 'white';
+	  });
+	});
+
+  </script>
+
+</body></html>
