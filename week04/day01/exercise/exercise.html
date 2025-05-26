@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Exercises XP</title>
+</head>
+<body>
+
+    <h2>Exercise 6 Output</h2>
+    <div id="fortune"></div>
+
+    <h2>Exercise 7 Output (Navbar)</h2>
+    <nav id="navbar" style="background: #eee; padding: 10px;"></nav>
+
+    <h2>Exercise 8 Output (Juice Bar)</h2>
+    <div id="juice"></div>
+
+    <script>
+        // Exercise 1 : Scope
+
+        // #1
+        function funcOne() {
+            let a = 5;
+            if (a > 1) {
+                a = 3;
+            }
+            alert(`inside the funcOne function ${a}`); // Prediction: 3
+        }
+        funcOne();
+
+        // #1.2 If declared with const, a reassignment (a = 3) would cause an error.
+
+        // #2
+        let a = 0;
+        function funcTwo() {
+            a = 5;
+        }
+        function funcThree() {
+            alert(`inside the funcThree function ${a}`); // First call: 0, Second call after funcTwo(): 5
+        }
+        funcThree();
+        funcTwo();
+        funcThree();
+
+        // #2.2 If a was declared with const, reassignment in funcTwo() would cause an error.
+
+        // #3
+        function funcFour() {
+            window.a = "hello";
+        }
+        function funcFive() {
+            alert(`inside the funcFive function ${a}`); // "hello"
+        }
+        funcFour();
+        funcFive();
+
+        // #4
+        let a4 = 1;
+        function funcSix() {
+            let a4 = "test";
+            alert(`inside the funcSix function ${a4}`); // "test"
+        }
+        funcSix();
+
+        // #4.2 const would still work inside the function as it's block scoped and not reassigned.
+
+        // #5
+        let a5 = 2;
+        if (true) {
+            let a5 = 5;
+            alert(`in the if block ${a5}`); // 5
+        }
+        alert(`outside of the if block ${a5}`); // 2
+
+        // #5.2 const would behave the same as let since both are block scoped.
+
+        // Exercise 2 : Ternary operator
+        const winBattle = () => true;
+        const experiencePoints = winBattle() ? 10 : 1;
+        console.log("Experience Points:", experiencePoints); // 10
+
+        // Exercise 3 : Is it a string?
+        const isString = value => typeof value === 'string';
+        console.log(isString('hello')); // true
+        console.log(isString([1, 2, 4, 0])); // false
+
+        // Exercise 4 : Find the sum
+        const sum = (a, b) => a + b;
+        console.log("Sum of 3 and 4:", sum(3, 4)); // 7
+
+        // Exercise 5 : Kg and grams
+
+        // Function declaration
+        function kgToGrams1(kg) {
+            return kg * 1000;
+        }
+        console.log("2kg to grams:", kgToGrams1(2)); // 2000
+
+        // Function expression
+        const kgToGrams2 = function(kg) {
+            return kg * 1000;
+        };
+        console.log("3kg to grams:", kgToGrams2(3)); // 3000
+
+        // Function declaration is hoisted, function expression is not.
+
+        // One-line arrow function
+        const kgToGrams3 = kg => kg * 1000;
+        console.log("1.5kg to grams:", kgToGrams3(1.5)); // 1500
+
+        // Exercise 6 : Fortune teller
+        (function(children, partner, location, job) {
+            const msg = `You will be a ${job} in ${location}, and married to ${partner} with ${children} kids.`;
+            document.getElementById("fortune").innerText = msg;
+        })(3, "Alex", "Paris", "Chef");
+
+        // Exercise 7 : Welcome
+        (function(username) {
+            const nav = document.getElementById("navbar");
+            const userDiv = document.createElement("div");
+            userDiv.innerHTML = `
+                <span>Welcome, ${username}</span>
+                <img src="https://media.istockphoto.com/id/1682296067/photo/happy-studio-portrait-or-professional-man-real-estate-agent-or-asian-businessman-smile-for.jpg?s=1024x1024&w=is&k=20&c=y4FFqpMLolCvEqoxlr4oypQqhAL1ta0ojXUnOofQXHk=" alt="Profile pic" style="border-radius:50%; margin-left: 10px;">
+            `;
+            nav.appendChild(userDiv);
+        })("John");
+
+        // Exercise 8 : Juice Bar
+        function makeJuice(size) {
+            const ingredients = [];
+
+            function addIngredients(ing1, ing2, ing3) {
+                ingredients.push(ing1, ing2, ing3);
+            }
+
+            function displayJuice() {
+                const msg = `The client wants a ${size} juice, containing ${ingredients.join(", ")}.`;
+                document.getElementById("juice").innerText = msg;
+            }
+
+            addIngredients("apple", "banana", "mint");
+            addIngredients("carrot", "ginger", "lemon");
+            displayJuice();
+        }
+
+        makeJuice("medium");
+
+    </script>
+</body>
+</html>
