@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Daily Challenge</title>
+</head>
+<body>
+
+  <script>
+    let client = "John";
+
+    const groceries = {
+      fruits: ["pear", "apple", "banana"],
+      vegetables: ["tomatoes", "cucumber", "salad"],
+      totalPrice: "20$",
+      other: {
+        paid: true,
+        meansOfPayment: ["cash", "creditCard"]
+      }
+    };
+
+    // Display fruits
+    const displayGroceries = () => {
+      groceries.fruits.forEach(fruit => console.log(fruit));
+    };
+    displayGroceries();
+
+    // Clone and test reference/value
+    const cloneGroceries = () => {
+      let user = client; // copy by value
+      client = "Betty";
+      console.log(user); // John
+      console.log(client); // Betty
+
+      let shopping = groceries; // copy by reference
+      shopping.totalPrice = "35$";
+      console.log(groceries.totalPrice); // 35$
+
+      shopping.other.paid = false;
+      console.log(groceries.other.paid); // false
+    };
+
+    cloneGroceries();
+  </script>
+
+</body>
+</html>
+
