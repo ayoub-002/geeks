@@ -60,9 +60,9 @@ const students = [
   {name: "Jamie", course: "Big Data", isPassed: false}
 ];
 
-const passedStudents = students.filter(s => s.isPassed);
+const passedStudents = students.filter(stdnt => stdnt.isPassed);
 console.log(passedStudents);
 
 students
-  .filter(s => s.isPassed)
-  .forEach(s => console.log(`Good job ${s.name}, you passed the course in ${s.course}`));
+  .filter(stdnt => stdnt.isPassed)
+  .forEach(stdnt => console.log(`Good job ${stdnt.name}, you passed the course in ${stdnt.course}`));
