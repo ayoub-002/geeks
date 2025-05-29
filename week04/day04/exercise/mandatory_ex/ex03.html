@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Exercise 3 - JSON Mario</title>
+</head>
+<body>
+  <h1>Exercise 3: JSON Mario</h1>
+  <script>
+    const marioGame = {
+      detail: "An amazing game!",
+      characters: {
+        mario: {
+          description: "Small and jumpy. Likes princesses.",
+          height: 10,
+          weight: 3,
+          speed: 12,
+        },
+        bowser: {
+          description: "Big and green, Hates princesses.",
+          height: 16,
+          weight: 6,
+          speed: 4,
+        },
+        princessPeach: {
+          description: "Beautiful princess.",
+          height: 12,
+          weight: 2,
+          speed: 2,
+        }
+      }
+    };
+
+    // Convert to JSON
+    const jsonMario = JSON.stringify(marioGame);
+    const prettyJSON = JSON.stringify(marioGame, null, 2);
+
+    // Debugging line
+    debugger;
+
+    console.log("Compact JSON:");
+    console.log(jsonMario);
+
+    console.log("Pretty JSON:");
+    console.log(prettyJSON);
+  </script>
+</body>
+</html>
