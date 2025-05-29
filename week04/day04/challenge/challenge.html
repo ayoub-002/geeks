@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Form to JSON Example</title>
+</head>
+<body>
+
+  <h2>Send Form Data as JSON</h2>
+
+  <form id="user-form">
+    <input type="text" id="name" placeholder="First Name" required>
+    <input type="text" id="lastname" placeholder="Last Name" required>
+    <button type="submit">Send</button>
+  </form>
+
+  <div id="output"></div>
+
+  <script>
+    const form = document.getElementById("user-form");
+    const output = document.getElementById("output");
+
+    form.addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      const name = document.getElementById("name").value.trim();
+      const lastname = document.getElementById("lastname").value.trim();
+
+      const data = {
+        name: name,
+        lastname: lastname
+      };
+
+      const jsonString = JSON.stringify(data);
+      output.textContent = jsonString;
+    });
+  </script>
+
+</body>
+</html>
