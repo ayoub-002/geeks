@@ -22,12 +22,11 @@
       pointer-events: none;
     }
     .app {
-      background: rgba(20, 20, 30, 0.92);
-      padding: 30px;
+      padding: 50px;
       border-radius: 18px;
       width: 100%;
-      max-width: 420px;
-      height: 200px;
+      max-width: 1000px;
+      height: 250px;
       box-shadow: 0 8px 32px 0 rgba(0,0,0,0.37);
       text-align: center;
       margin-top: 30px;
@@ -95,6 +94,7 @@
     }
     #character-info p strong {
       color: #ffe81f;
+      font-family: 'Courier New', Courier, monospace;
     }
     #error {
       margin-top: 20px;
