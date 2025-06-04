@@ -82,7 +82,7 @@
         const homeworld = await getHomeworld(char.homeworld);
 
         infoEl.innerHTML = `
-          <p><strong>${char.name}</strong></p>
+          <h1><strong>${char.name}</strong></h1>
           <p><strong>Height:</strong> ${char.height} cm</p>
           <p><strong>Gender:</strong> ${capitalize(char.gender)}</p>
           <p><strong>Birth Year:</strong> ${char.birth_year}</p>
