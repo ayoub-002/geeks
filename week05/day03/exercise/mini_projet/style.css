@@ -106,6 +106,7 @@
       display: none;
     }
      #character-info h1{
-      color: #ffffff;
-      font-family: 'Courier New', Courier, monospace;
+    color: #ffffff;
+    font-family: 'Roboto', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    padding: 10px;
     }
