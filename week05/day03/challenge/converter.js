@@ -8,18 +8,25 @@ const resultEl = document.getElementById('result');
 const API_KEY = '9dd902c4f1bb4705daec47f6';
 const BASE_URL = `https://v6.exchangerate-api.com/v6/${API_KEY}`;
 
-// Supported currencies (expand as needed)
 const supportedCurrencies = {
   USD: 'United States Dollar',
-  EUR: 'Euro',
+  AUD: 'Australian Dollar',
+  BGN: 'Bulgarian Lev',
+  BRL: 'Brazilian Real',
+  CAD: 'Canadian Dollar',
+  CNY: 'Chinese Yuan',
+  CZK: 'Czech Koruna',
+  DKK: 'Danish Krone',
   GBP: 'British Pound Sterling',
+  HKD: 'Hong Kong Dollar',
+  HUF: 'Hungarian Forint',
+  IDR: 'Indonesian Rupiah',
+  EUR: 'Euro',
   ILS: 'Israeli New Shekel',
   JPY: 'Japanese Yen',
-  AUD: 'Australian Dollar',
-  CAD: 'Canadian Dollar',
   INR: 'Indian Rupee',
-  CNY: 'Chinese Yuan',
-  CHF: 'Swiss Franc'
+  CHF: 'Swiss Franc',
+  MAD: 'Moroccan Dirham'
 };
 
 function populateCurrencyOptions() {
