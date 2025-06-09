@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Emoji Guessing Game</title>
+</head>
+<body>
+  <h1>Emoji Guessing Game</h1>
+  <div id="game">
+    <p id="emoji" style="font-size: 50px;"></p>
+    <div id="options"></div>
+    <button id="submitBtn" disabled>Submit Guess</button>
+    <p id="feedback"></p>
+    <p>Score: <span id="score">0</span></p>
+  </div>
+
+  <h2>Leaderboard</h2>
+  <ul id="leaderboard"></ul>
+
+  <script>
+    let currentEmoji = null;
+    let selectedGuess = null;
+    let score = 0;
+
+    async function loadGame() {
+      document.getElementById('feedback').textContent = '';
+      const res = await fetch('/game');
+      const data = await res.json();
+      currentEmoji = data.emoji;
+      selectedGuess = null;
+      document.getElementById('emoji').textContent = currentEmoji;
+
+      const optionsDiv = document.getElementById('options');
+      optionsDiv.innerHTML = '';
+      data.options.forEach(opt => {
+        const btn = document.createElement('button');
+        btn.textContent = opt;
+        btn.onclick = () => {
+          selectedGuess = opt;
+          document.querySelectorAll('#options button').forEach(b => b.disabled = false);
+          btn.disabled = true;
+          document.getElementById('submitBtn').disabled = false;
+        };
+        optionsDiv.appendChild(btn);
+      });
+
+      document.getElementById('submitBtn').disabled = true;
+    }
+
+    document.getElementById('submitBtn').onclick = async () => {
+      if (!selectedGuess) return;
+      const res = await fetch('/guess', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ emoji: currentEmoji, guess: selectedGuess }),
+      });
+      const data = await res.json();
+      if (data.correct) {
+        document.getElementById('feedback').textContent = 'Correct! 🎉';
+        score = data.score;
+      } else {
+        document.getElementById('feedback').textContent = 'Wrong! 😢';
+      }
+      document.getElementById('score').textContent = score;
+      await loadLeaderboard();
+      await loadGame();
+    };
+
+    async function loadLeaderboard() {
+      const res = await fetch('/leaderboard');
+      const data = await res.json();
+      const leaderboardUl = document.getElementById('leaderboard');
+      leaderboardUl.innerHTML = '';
+      data.forEach((entry, idx) => {
+        const li = document.createElement('li');
+        li.textContent = `${idx + 1}. ${entry.playerName} - ${entry.score}`;
+        leaderboardUl.appendChild(li);
+      });
+    }
+
+    window.onload = async () => {
+      await loadGame();
+      await loadLeaderboard();
+    };
+  </script>
+</body>
+</html>
