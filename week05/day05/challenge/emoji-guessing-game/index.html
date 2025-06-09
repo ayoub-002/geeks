@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Emoji Guessing Game</title>
+  <title>Guessing Game</title>
 </head>
 <body>
   <h1>Emoji Guessing Game</h1>
@@ -56,10 +56,10 @@
       });
       const data = await res.json();
       if (data.correct) {
-        document.getElementById('feedback').textContent = 'Correct! 🎉';
+        document.getElementById('feedback').textContent = 'Correct!';
         score = data.score;
       } else {
-        document.getElementById('feedback').textContent = 'Wrong! 😢';
+        document.getElementById('feedback').textContent = 'Wrong!';
       }
       document.getElementById('score').textContent = score;
       await loadLeaderboard();
